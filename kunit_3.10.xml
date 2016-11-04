@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote fetch="https://github.com/k-unit" name="kunit"/>
+  <remote fetch="https://github.com/ilansmith" name="ilansmith"/>
+
+  <default remote="kunit" revision="linux_3.10"/>
+
+  <project name="env" path="env" remote="ilansmith" revision="linux_3.10">
+    <copyfile dest="Makefile" src="build/Makefile"/>
+    <copyfile dest="mk.build" src="build/mk.build"/>
+    <copyfile dest="mk.rec" src="build/mk.rec"/>
+    <copyfile dest=".config" src="build/kunit_defconfig"/>
+    <copyfile dest="ut/Kbuild" src="build/Kbuild"/>
+  </project>
+  <project name="unit_test" path="core" remote="ilansmith" revision="linux_3.10"/>
+  <project name="emu" path="kernel/emu"/>
+  <project name="dev_tree" path="ut/dev_tree"/>
+  <project name="ffu" path="ut/ffu"/>
+  <project name="mmc_debugfs" path="ut/mmc_debugfs"/>
+  <project name="slw" path="ut/slw"/>
+</manifest>
+

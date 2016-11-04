@@ -23,4 +23,5 @@ To setup a project follow these simple steps:
 Use `make --help` in the project root to see the available build options.
 
 Available projects:
+* **kunit** - kernel code unit testing in user space
 
