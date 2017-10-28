@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote fetch="https://github.com/ilansmith" name="ilansmith"/>
+
+  <default remote="ilansmith" revision="unit_test"/>
+
+  <project name="env" path="env" remote="ilansmith">
+    <copyfile dest="Makefile" src="build/Makefile"/>
+    <copyfile dest="mk.build" src="build/mk.build"/>
+    <copyfile dest="mk.rec" src="build/mk.rec"/>
+    <copyfile dest=".config" src="build/ut_defconfig"/>
+    <copyfile dest="ut/Ubuild" src="build/Ubuild"/>
+  </project>
+  <project name="unit_test" path="core" remote="ilansmith" revision="tests"/>
+  <project name="sliding_window" path="ut/slw"/>
+  <project name="sdp_parser" path="ut/sdp"/>
+  <project name="vector" path="ut/vector"/>
+</manifest>
+
