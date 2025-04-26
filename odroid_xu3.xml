@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote fetch="https://github.com/odroid-xu3" name="odroid-xu3"/>
+  <remote fetch="https://github.com/ilansmith" name="ilansmith"/>
+  <remote fetch="https://github.com/k-unit" name="k-unit"/>
+
+  <project name="env" path="env" remote="ilansmith" revision="ubuntu_1604_octa5422_samsung">
+    <copyfile dest="Makefile" src="build/Makefile"/>
+  </project>
+  <project name="kernel" path="ubuntu/kernel" remote="odroid-xu3" revision="odroidxu3-3.10.y"/>
+  <project name="dev_tree" path="dev/kernel/dev_tree" remote="k-unit" revision="linux_3.10"/>
+</manifest>
+
